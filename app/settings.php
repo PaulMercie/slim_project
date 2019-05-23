@@ -9,6 +9,6 @@ $settings['displayErrorDetails'] = true;
 $settings['db'] = [];
 $settings['db']['host'] = 'localhost';
 $settings['db']['port'] = '8889';
-$settings['db']['name'] = 'hetic_students';
+$settings['db']['name'] = 'hetic_portfolio_slim';
 $settings['db']['user'] = 'root';
 $settings['db']['pass'] = 'root';

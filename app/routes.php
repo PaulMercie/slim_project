@@ -11,21 +11,21 @@ $app->get(
     }
 )->setName('home');
 
-// Promotions
+// Projects
 $app->get(
-    '/promotions',
+    '/projects',
     function($request, $response)
     {
         // Fetch promotions
-        $query = $this->db->query('SELECT * FROM promotions');
-        $promotions = $query->fetchAll();
+        $query = $this->db->query('SELECT * FROM projects');
+        $projects = $query->fetchAll();
 
         $viewData = [];
-        $viewData['promotions'] = $promotions;
+        $viewData['projects'] = $projects;
 
-        return $this->view->render($response, 'pages/promotions.twig', $viewData);
+        return $this->view->render($response, 'pages/projects.twig', $viewData);
     }
-)->setName('promotions');
+)->setName('projects');
 
 // Promotion
 $app->get(
