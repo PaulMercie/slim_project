@@ -3,7 +3,7 @@
 <h1>Mes Projets</h1>
 
 {% for project in projects %}
-    <a href="{{ path_for('promotion', { year: promotion.year }) }}">P{{ promotion.year }}</a>
+    <a href="{{ path_for('projects', { name: project.name }) }}">{{ project.name }}</a>
 {% endfor %}
 
 {% include 'partials/footer.twig' %}

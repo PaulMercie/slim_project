@@ -27,16 +27,16 @@ $app->get(
     }
 )->setName('projects');
 
-// Promotion
+// Project
 $app->get(
-    '/promotions/{year:[0-9]{4}}',
+    '/projects/{slug:[a-z0-9_-]+}',
     function($request, $response, $arguments)
     {
         $viewData = [];
 
-        return $this->view->render($response, 'pages/promotion.twig', $viewData);
+        return $this->view->render($response, 'pages/project.twig', $viewData);
     }
-)->setName('promotion');
+)->setName('project');
 
 // Random Student
 $app->get(
